@@ -13,6 +13,7 @@ RSpec.describe Order, type: :model do
 
   describe 'Associations' do
     it { is_expected.to belong_to(:user).required(true) }
+    it { is_expected.to have_many(:items).class_name('OrderItem') }
   end
 
   describe 'Factory' do
