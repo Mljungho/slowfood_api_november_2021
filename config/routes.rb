@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   namespace :api do
-
-    end
+    resources :orders, only: [:create]
   end
+end
